@@ -1,0 +1,47 @@
+{{a}}<br>
+NAME:{{b}}<br>
+STATUS:{{c}}<br>
+NUMBER:{{d}}<br>
+
+<input type="text" [(ngModel)]="name">
+<input type="button" value="submit" (click)="printdata($event)">
+<br>
+
+constructor : Document.GetElementByID test:
+
+<input type="text" id="doctest">
+<br>
+
+<span *ngIf="status else condition1">Condition is true</span>
+<ng-template #condition1> This Condition value is false</ng-template>
+<br>
+
+FOR LOOP DATA: <br>
+<div *ngFor="let mobile of mobiles">{{mobile}}</div>
+<br>
+UPPER case : {{name1}}
+<br>
+LOWER case : {{name2}}
+<br>
+money :{{money |currency:'USD'}}
+<br>
+Date : {{todaydate}}
+<br>
+percent : {{performance | percent}}
+<br>
+
+<input type="button" value="getusernames" (click)="getalluser()">
+<table border="1">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>username</th>
+        <th>email</th>
+    </tr>
+    <tr *ngFor="let User of users">
+        <td>{{User.id}}</td>
+        <td>{{User.name}}</td>
+        <td>{{User.city}}</td>
+        <td>{{User.email}}</td>
+    </tr>
+</table>
